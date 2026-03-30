@@ -11,15 +11,24 @@ import cors from 'cors'
 app.use(cors())
 
 // TODO 5: Create the home route "/"
-
+app.get('/', (req, res) => {
+  res.send('Hello from the backend server')
+})
 
 
 // TODO 6: Create the "/about" route
-
+app.get('/about', (req, res) => {
+  res.send('This is the about route')
+})
 
 
 // TODO 7: Create the "/student" route
-
+app.get('/student', (req, res) => {
+  res.json({
+    name: 'Aisha',
+    major: 'Computer Science'
+  })
+})
 
 
 // TODO 4: Start the server on port 3000
