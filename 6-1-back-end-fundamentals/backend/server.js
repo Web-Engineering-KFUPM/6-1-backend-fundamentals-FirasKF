@@ -1,14 +1,14 @@
 // TODO 1: Import Express
-
+import Express from 'Express'
 
 
 // TODO 2: Create the Express app and store it in a variable named app
-
+const app = Express()
 
 
 // TODO 3: Allow React to access the server
-
-
+import cors from 'cors'
+app.use(cors())
 
 // TODO 5: Create the home route "/"
 
@@ -23,3 +23,6 @@
 
 
 // TODO 4: Start the server on port 3000
+app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000')
+})
